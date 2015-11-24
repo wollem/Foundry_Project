@@ -2,15 +2,14 @@
 using System.Collections;
 
 public class PickUpItem : MonoBehaviour {
-	public string name; 
-	public Texture2D image;
-	// Use this for initialization
-	void Start () {
+	public string itemName; 
+	public Sprite image;
+
+//	void Start () {
+//	
+//	}
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+//	void Update () {
+//	
+//	}
 }
