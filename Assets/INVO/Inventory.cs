@@ -25,8 +25,7 @@ public class Inventory : MonoBehaviour {
 //			if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit)) {
 //				PickUpItem item = hit.collider.GetComponent<PickUpItem>();
 //				if(item != null){
-//					items.Add(item);
-//					Destroy(item.gameObject);
+//					AddItem(item);
 //				}
 //			}
 //		}
@@ -42,13 +41,20 @@ public class Inventory : MonoBehaviour {
 	public static void AddItem(PickUpItem item){
 		instance.items.Add (item);
 		instance.UpdateItemSlot(instance.items.Count - 1);
-		Destroy (item.gameObject);
+		instance.HideObj (item.gameObject);
+	}
+
+	public void RemoveItem(PickUpItem item, int itemGUIIndex) {
+		items.Remove (item);
+		itemGUIs.transform.GetChild(itemGUIIndex).GetComponent<Button>().onClick.RemoveAllListeners();
+		itemGUIs.transform.GetChild(itemGUIIndex).GetChild(1).GetComponent<Text>().text = "None";
+		itemGUIs.transform.GetChild(itemGUIIndex).GetChild(0).GetComponent<Image>().sprite = null;
 	}
 
 	public void UpdateItemSlot(int index) {
-		print (index);
-		itemGUIs.transform.GetChild(index).GetChild(0).GetComponent<Image>().sprite = items[index].image;
+		itemGUIs.transform.GetChild(index).GetComponent<Button>().onClick.AddListener(() => ShowObj(items[index].gameObject, index));
 		itemGUIs.transform.GetChild(index).GetChild(1).GetComponent<Text>().text = items[index].itemName;
+		itemGUIs.transform.GetChild(index).GetChild(0).GetComponent<Image>().sprite = items[index].image;
 	}
 
 	void ShowInventory() {
@@ -61,6 +67,19 @@ public class Inventory : MonoBehaviour {
 		Time.timeScale = 1f;
 		showGUI = false;
 		gui.gameObject.SetActive(false);
+	}
+
+	void HideObj(GameObject obj) {
+		obj.transform.position = Vector3.one*99999f;
+		obj.GetComponent<Renderer>().enabled = false;
+	}
+
+	public void ShowObj(GameObject obj, int itemGUIIndex) {
+		if(obj != null) {
+			RemoveItem(obj.GetComponent<PickUpItem>(), itemGUIIndex);
+			obj.transform.position = transform.position + transform.forward*2;
+			obj.GetComponent<Renderer>().enabled = true;
+		}
 	}
 
 //	void UpdateGUI() {
