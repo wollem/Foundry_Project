@@ -20,15 +20,15 @@ public class Inventory : MonoBehaviour {
 	}
 	
 	void Update () {
-//		if(Input.GetButtonDown("Fire1")) {
-//			RaycastHit hit;
-//			if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit)) {
-//				PickUpItem item = hit.collider.GetComponent<PickUpItem>();
-//				if(item != null){
-//					AddItem(item);
-//				}
-//			}
-//		}
+		if(Input.GetButtonDown("Fire1")) {
+			RaycastHit hit;
+			if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit)) {
+				PickUpItem item = hit.collider.GetComponent<PickUpItem>();
+				if(item != null){
+					AddItem(item);
+				}
+			}
+		}
 
 		if(Input.GetKeyDown(KeyCode.Tab)) {
 			if(showGUI)
