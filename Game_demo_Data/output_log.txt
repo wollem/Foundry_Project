@@ -1,0 +1,45 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+[VRDevice] Successfully created device oculus.
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 660 Ti (ID=0x1183)
+    Vendor:   NVIDIA
+    VRAM:     1989 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Project_Foundry_masters_git\Game_demo_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Project_Foundry_masters_git\Game_demo_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Project_Foundry_masters_git\Game_demo_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\Project_Foundry_masters_git\Game_demo_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\Project_Foundry_masters_git\Game_demo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Project_Foundry_masters_git\Game_demo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Project_Foundry_masters_git\Game_demo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Project_Foundry_masters_git\Game_demo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Project_Foundry_masters_git\Game_demo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Project_Foundry_masters_git\Game_demo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Project_Foundry_masters_git\Game_demo_Data\Managed\PlayMaker.dll (this message is harmless)
+Loading F:\Project_Foundry_masters_git\Game_demo_Data\Managed\PlayMaker.dll into Unity Child Domain
+Platform assembly: F:\Project_Foundry_masters_git\Game_demo_Data\Managed\LeapCSharp.NET3.5.dll (this message is harmless)
+Loading F:\Project_Foundry_masters_git\Game_demo_Data\Managed\LeapCSharp.NET3.5.dll into Unity Child Domain
+Platform assembly: F:\Project_Foundry_masters_git\Game_demo_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.171 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1093 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: F:\Project_Foundry_masters_git\Game_demo_Data\Managed\System.dll (this message is harmless)
+11/24/15 08:20:18: [CAPI] LibOVR module is located at C:\Windows\system32\LibOVRRT32_0_7.dll
+
+ 
+(Filename:  Line: 46)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 5908 -> priority: 1 
+Can't find any images. Make sure you enabled 'Allow Images' in the Leap Motion Settings, you are on tracking version 2.1+ and your Leap Motion device is plugged in.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Can't find any images. Make sure you enabled 'Allow Images' in the Leap Motion Settings, you are on tracking version 2.1+ and your Leap Motion device is plugged in.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+

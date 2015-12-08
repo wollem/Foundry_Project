@@ -46,8 +46,9 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void UpdateItemSlot(int index) {
-		itemGUIs.transform.GetChild(index).GetChild(0).GetComponent<Text>().text = items[index].itemName;
-		itemGUIs.transform.GetChild(index).GetChild(1).GetComponent<Image>().sprite = items[index].image;
+		print (index);
+		itemGUIs.transform.GetChild(index).GetChild(0).GetComponent<Image>().sprite = items[index].image;
+		itemGUIs.transform.GetChild(index).GetChild(1).GetComponent<Text>().text = items[index].itemName;
 	}
 
 	void ShowInventory() {
