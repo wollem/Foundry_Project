@@ -10,6 +10,7 @@ public class PickUpItem : MonoBehaviour {
 			transform.parent = null;
 			GetComponent<Collider>().isTrigger = false;
 			GetComponent<Rigidbody>().isKinematic = false;
+			GetComponent<Rigidbody>().useGravity = true;
 		}
 	}
 }

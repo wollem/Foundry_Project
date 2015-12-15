@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SpawnObject : MonoBehaviour {
 
+	public Vector3 offset;
 	public GameObject objectHolder;
 	public GameObject objectToSpawn;
 
@@ -16,7 +17,7 @@ public class SpawnObject : MonoBehaviour {
 
 	void Activate() {
 		if(objectHolder.transform.childCount == 0) {
-			GameObject obj = (GameObject)Instantiate(objectToSpawn, objectHolder.transform.position + Vector3.up, objectHolder.transform.rotation);
+			GameObject obj = (GameObject)Instantiate(objectToSpawn, objectHolder.transform.position + offset, objectHolder.transform.rotation);
 			obj.transform.parent = objectHolder.transform;
 		}
 	}
